@@ -106,7 +106,13 @@ const Contact: React.FC = () => {
               {t('contact.form.title')}
             </h3>
             
-            <form className="space-y-6" action={`mailto:${personalInfo.email}`} method="post" encType="text/plain">
+            <form className="space-y-6" onSubmit={(e) => {
+              e.preventDefault();
+              const formData = new FormData(e.target as HTMLFormElement);
+              const subject = formData.get('subject') || 'Contacto desde portafolio';
+              const body = `Nombre: ${formData.get('name')}\nEmail: ${formData.get('email')}\n\nMensaje:\n${formData.get('message')}`;
+              window.location.href = `mailto:${personalInfo.email}?subject=${encodeURIComponent(subject as string)}&body=${encodeURIComponent(body)}`;
+            }}>
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                   {t('contact.form.name')}
