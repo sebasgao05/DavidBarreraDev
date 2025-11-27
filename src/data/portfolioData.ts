@@ -1,3 +1,5 @@
+import { env } from '../config/env';
+
 // Multilingual portfolio data
 export const portfolioData = {
   es: {
@@ -128,12 +130,12 @@ export const portfolioData = {
 
 // Static data (language independent)
 export const personalInfo = {
-  name: 'David Barrera',
-  email: 'sebasgao05@icloud.com',
-  linkedin: 'https://www.linkedin.com/in/sebasgao05/',
-  github: 'https://github.com/sebasgao05',
-  cvUrl: '/cv-david-barrera.pdf',
-  profileImage: '/images/profile/profile-david.jpg'
+  name: env.personal.name,
+  email: env.personal.email,
+  linkedin: env.personal.linkedin,
+  github: env.personal.github,
+  cvUrl: env.personal.cv.es,
+  profileImage: env.personal.profileImage
 };
 
 export const skills = {

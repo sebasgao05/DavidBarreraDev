@@ -33,6 +33,13 @@ npm install
 npm start
 ```
 
+## Variables de entorno y secretos
+
+- Copia `.env.example` a `.env` y completa los valores antes de construir o desplegar.
+- Las variables `REACT_APP_*` se inyectan en el bundle del frontend; utilízalas solo para configuraciones visibles (email, links, URLs), no para secretos reales.
+- Define `DEPLOY_BUCKET_NAME` y `DEPLOY_DISTRIBUTION_ID` en tu gestor de secretos o entorno de CI/CD antes de correr `npm run deploy`.
+- Las credenciales de AWS deben venir de variables de entorno o perfiles de AWS CLI (nunca se almacenan en el código o el repositorio).
+
 ## 🏗️ Estructura del Proyecto
 
 ```
@@ -80,12 +87,8 @@ npm run build:prod
 
 ### Datos Personales
 
-Edita `src/data/portfolio.ts` para actualizar:
-- Información personal
-- Habilidades técnicas
-- Experiencia laboral
-- Proyectos
-- Certificaciones
+Configura los datos visibles (nombre, email, redes, CV) en el archivo `.env` usando las llaves `REACT_APP_*`. 
+Para el resto del contenido del portafolio (habilidades, experiencia, proyectos, certificaciones) edita `src/data/portfolioData.ts`.
 
 ### Estilos
 

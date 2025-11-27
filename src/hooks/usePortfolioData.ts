@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { portfolioData, personalInfo, skills, certifications, currentlyLearning } from '../data/portfolioData';
+import { env } from '../config/env';
 
 export const usePortfolioData = () => {
   const { i18n } = useTranslation();
@@ -9,7 +10,7 @@ export const usePortfolioData = () => {
     personalInfo: {
       ...personalInfo,
       role: portfolioData[currentLang].personalInfo.role,
-      cvUrl: currentLang === 'es' ? '/DavidBarrera-BogotaES.pdf' : '/DavidBarrera-BogotaEN.pdf'
+      cvUrl: currentLang === 'es' ? env.personal.cv.es : env.personal.cv.en
     },
     experience: portfolioData[currentLang].experience,
     projects: portfolioData[currentLang].projects,

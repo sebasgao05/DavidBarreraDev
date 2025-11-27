@@ -1,3 +1,5 @@
+import { env } from '../config/env';
+
 interface SitemapUrl {
   loc: string;
   lastmod?: string;
@@ -5,7 +7,7 @@ interface SitemapUrl {
   priority?: number;
 }
 
-export const generateSitemap = (baseUrl: string = 'https://david-barrera.com'): string => {
+export const generateSitemap = (baseUrl: string = env.siteUrl): string => {
   const urls: SitemapUrl[] = [
     {
       loc: baseUrl,
@@ -46,7 +48,7 @@ ${urls.map(url => `  <url>
   return sitemap;
 };
 
-export const generateRobotsTxt = (baseUrl: string = 'https://david-barrera.com'): string => {
+export const generateRobotsTxt = (baseUrl: string = env.siteUrl): string => {
   return `User-agent: *
 Allow: /
 
