@@ -8,7 +8,8 @@ export const usePortfolioData = () => {
   return {
     personalInfo: {
       ...personalInfo,
-      role: portfolioData[currentLang].personalInfo.role
+      role: portfolioData[currentLang].personalInfo.role,
+      cvUrl: currentLang === 'es' ? '/DavidBarrera-BogotaES.pdf' : '/DavidBarrera-BogotaEN.pdf'
     },
     experience: portfolioData[currentLang].experience,
     projects: portfolioData[currentLang].projects,

@@ -1,14 +1,14 @@
 import { useEffect, useState } from 'react';
 
+const konamiSequence = [
+  'ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown',
+  'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight',
+  'KeyB', 'KeyA'
+];
+
 const KonamiCode: React.FC = () => {
   const [konamiCode, setKonamiCode] = useState<string[]>([]);
   const [textInput, setTextInput] = useState<string>('');
-  
-  const konamiSequence = [
-    'ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown',
-    'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight',
-    'KeyB', 'KeyA'
-  ];
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {

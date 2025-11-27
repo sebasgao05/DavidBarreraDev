@@ -5,7 +5,7 @@ export const personalInfo = {
   linkedin: 'https://www.linkedin.com/in/sebasgao05/', 
   github: 'https://github.com/sebasgao05', 
   cvUrl: '/cv-david-barrera.pdf',
-  profileImage: '/profile-david.jpg'
+  profileImage: '/images/profile/profile-david.jpg'
 };
 
 export const skills = {
@@ -64,7 +64,7 @@ export const projects = [
   {
     title: 'AWS Cloud + IOT',
     description: 'proyecto desarrollado un sensor de gas implementado en la nube, incluyendo arquitecturas serverless',
-    image: '/project-aws-iot.jpg',
+    image: '/images/projects/project-aws-iot.jpg',
     technologies: ['DynamoDB', 'EC2', 'SNS'],
     githubUrl: 'https://github.com/sebasgao05',
     demoUrl: 'https://54.242.72.108/',
@@ -73,7 +73,7 @@ export const projects = [
   {
     title: 'Portafolio Personal',
     description: 'Portafolio web desarrollado con React y TypeScript, desplegado en AWS con CI/CD automatizado.',
-    image: '/project-portfolio.jpg',
+    image: '/images/projects/project-portfolio.jpg',
     technologies: ['React', 'TypeScript', 'Tailwind CSS', 'AWS S3', 'CloudFront'],
     githubUrl: 'https://github.com/sebasgao05/DavidBarreraDev',
     demoUrl: 'https://david-barrera.com/',
@@ -82,7 +82,7 @@ export const projects = [
   {
     title: '2048 Game - EAN Version',
     description: 'Implementación del popular juego 2048 con temática universitaria EAN. Desarrollado con JavaScript vanilla y diseño responsive.',
-    image: '/project-2048.jpg',
+    image: '/images/projects/project-2048.jpg',
     technologies: ['JavaScript', 'HTML5', 'CSS3', 'AWS Amplify'],
     githubUrl: 'https://github.com/sebasgao05/2048-EAN',
     demoUrl: 'https://main.d2hjpea8ccpmhc.amplifyapp.com/',

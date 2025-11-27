@@ -25,17 +25,48 @@ const SEOHead: React.FC<SEOHeadProps> = ({
 
   const defaultStructuredData = {
     "@context": "https://schema.org",
-    "@type": "Person",
+    "@type": ["Person", "WebPage"],
     "name": "David Barrera",
     "jobTitle": "Full Stack Developer & Systems Engineer",
+    "description": description,
     "url": "https://david-barrera.com",
+    "image": "https://david-barrera.com/profile-david.webp",
     "sameAs": [
       "https://linkedin.com/in/sebasgao05",
       "https://github.com/sebasgao05"
     ],
-    "knowsAbout": ["React", "Node.js", "AWS", "TypeScript", "Cloud Computing"],
-    "alumniOf": "Systems Engineering",
-    "email": "sebasgao05@gmail.com"
+    "knowsAbout": [
+      {
+        "@type": "Thing",
+        "name": "React"
+      },
+      {
+        "@type": "Thing", 
+        "name": "Node.js"
+      },
+      {
+        "@type": "Thing",
+        "name": "AWS"
+      },
+      {
+        "@type": "Thing",
+        "name": "TypeScript"
+      }
+    ],
+    "alumniOf": {
+      "@type": "EducationalOrganization",
+      "name": "Systems Engineering"
+    },
+    "email": "sebasgao05@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "CO",
+      "addressLocality": "Bogotá"
+    },
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Freelance Developer"
+    }
   };
 
   const getSectionMeta = () => {
@@ -78,6 +109,11 @@ const SEOHead: React.FC<SEOHeadProps> = ({
         {JSON.stringify(structuredData || defaultStructuredData)}
       </script>
       
+      {/* Hreflang */}
+      <link rel="alternate" hrefLang="es" href="https://david-barrera.com/?lang=es" />
+      <link rel="alternate" hrefLang="en" href="https://david-barrera.com/?lang=en" />
+      <link rel="alternate" hrefLang="x-default" href="https://david-barrera.com/" />
+      
       {/* Open Graph */}
       <meta property="og:type" content="website" />
       <meta property="og:title" content={sectionMeta.title} />
@@ -85,6 +121,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta property="og:image" content={image} />
       <meta property="og:url" content={url} />
       <meta property="og:locale" content={i18n.language === 'es' ? 'es_ES' : 'en_US'} />
+      <meta property="og:site_name" content="David Barrera Portfolio" />
       
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />

@@ -27,7 +27,7 @@ const LazyImage: React.FC<LazyImageProps> = ({
 }) => {
   const [imageSrc, setImageSrc] = useState<string>('');
   const [imageLoaded, setImageLoaded] = useState(false);
-  const [imageError, setImageError] = useState(false);
+  const [, setImageError] = useState(false);
   const imgRef = useRef<HTMLImageElement>(null);
 
   // Generate WebP version of the image

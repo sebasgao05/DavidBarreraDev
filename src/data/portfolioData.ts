@@ -24,7 +24,7 @@ export const portfolioData = {
       {
         title: 'AWS Cloud + IOT',
         description: 'proyecto desarrollado un sensor de gas implementado en la nube, incluyendo arquitecturas serverless',
-        image: '/project-aws-iot.jpg',
+        image: '/images/projects/project-aws-iot.jpg',
         technologies: ['DynamoDB', 'EC2', 'SNS'],
         githubUrl: 'https://github.com/sebasgao05',
         demoUrl: 'https://54.242.72.108/',
@@ -33,7 +33,7 @@ export const portfolioData = {
       {
         title: 'Portafolio Personal',
         description: 'Portafolio web desarrollado con React y TypeScript, desplegado en AWS con CI/CD automatizado.',
-        image: '/project-portfolio.jpg',
+        image: '/images/projects/project-portfolio.jpg',
         technologies: ['React', 'TypeScript', 'Tailwind CSS', 'AWS S3', 'CloudFront'],
         githubUrl: 'https://github.com/sebasgao05/portafolio',
         demoUrl: 'https://david-barrera.com/',
@@ -42,7 +42,7 @@ export const portfolioData = {
       {
         title: '2048 Game - EAN Version',
         description: 'Implementación del popular juego 2048 con temática universitaria EAN. Desarrollado con JavaScript vanilla y diseño responsive.',
-        image: '/project-2048.jpg',
+        image: '/images/projects/project-2048.jpg',
         technologies: ['JavaScript', 'HTML5', 'CSS3', 'AWS Amplify'],
         githubUrl: 'https://github.com/sebasgao05/2048-EAN',
         demoUrl: 'https://main.d2hjpea8ccpmhc.amplifyapp.com/',
@@ -86,7 +86,7 @@ export const portfolioData = {
       {
         title: 'AWS Cloud + IOT',
         description: 'Project developed a gas sensor implemented in the cloud, including serverless architectures',
-        image: '/project-aws-iot.jpg',
+        image: '/images/projects/project-aws-iot.jpg',
         technologies: ['AWS Lambda', 'API Gateway', 'DynamoDB', 'S3', 'CloudFormation'],
         githubUrl: 'https://github.com/sebasgao05',
         demoUrl: 'https://54.242.72.108/',
@@ -95,7 +95,7 @@ export const portfolioData = {
             {
         title: 'Personal Portfolio',
         description: 'Web portfolio developed with React and TypeScript, deployed on AWS with automated CI/CD.',
-        image: '/project-portfolio.jpg',
+        image: '/images/projects/project-portfolio.jpg',
         technologies: ['React', 'TypeScript', 'Tailwind CSS', 'AWS S3', 'CloudFront'],
         githubUrl: 'https://github.com/sebasgao05/DavidBarreraDev',
         demoUrl: 'https://david-barrera.com/',
@@ -104,7 +104,7 @@ export const portfolioData = {
       {
         title: '2048 Game - EAN Version',
         description: 'Implementation of the popular 2048 game with EAN university theme. Developed with vanilla JavaScript and responsive design.',
-        image: '/project-2048.jpg',
+        image: '/images/projects/project-2048.jpg',
         technologies: ['JavaScript', 'HTML5', 'CSS3', 'AWS Amplify'],
         githubUrl: 'https://github.com/sebasgao05/2048-EAN',
         demoUrl: 'https://main.d2hjpea8ccpmhc.amplifyapp.com/',
@@ -133,7 +133,7 @@ export const personalInfo = {
   linkedin: 'https://www.linkedin.com/in/sebasgao05/',
   github: 'https://github.com/sebasgao05',
   cvUrl: '/cv-david-barrera.pdf',
-  profileImage: '/profile-david.jpg'
+  profileImage: '/images/profile/profile-david.jpg'
 };
 
 export const skills = {

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { Calendar, MapPin, GraduationCap } from 'lucide-react';
+import { Calendar, GraduationCap } from 'lucide-react';
 import { usePortfolioData } from '../hooks/usePortfolioData';
 
 const Experience: React.FC = () => {
