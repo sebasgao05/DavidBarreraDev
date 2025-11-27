@@ -5,7 +5,7 @@ export const personalInfo = {
   linkedin: 'https://www.linkedin.com/in/sebasgao05/', 
   github: 'https://github.com/sebasgao05', 
   cvUrl: '/cv-david-barrera.pdf',
-  profileImage: '/images/profile/profile-david.jpg'
+  profileImage: '/images/profile/profile-david.webp'
 };
 
 export const skills = {

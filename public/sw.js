@@ -32,6 +32,9 @@ self.addEventListener('install', (event) => {
         return cache.addAll(STATIC_ASSETS);
       })
       .then(() => self.skipWaiting())
+      .catch((error) => {
+        console.error('SW installation failed:', error);
+      })
   );
 });
 
@@ -46,10 +49,14 @@ self.addEventListener('activate', (event) => {
               console.log('🗑️ Deleting old cache:', cacheName);
               return caches.delete(cacheName);
             }
+            return Promise.resolve();
           })
         );
       })
       .then(() => self.clients.claim())
+      .catch((error) => {
+        console.error('SW activation failed:', error);
+      })
   );
 });
 
@@ -160,10 +167,16 @@ function isStaticAsset(pathname) {
 // Limpiar cache periódicamente
 self.addEventListener('message', (event) => {
   if (event.data && event.data.type === 'CLEAR_CACHE') {
-    caches.keys().then((cacheNames) => {
-      return Promise.all(
-        cacheNames.map((cacheName) => caches.delete(cacheName))
-      );
-    });
+    event.waitUntil(
+      caches.keys()
+        .then((cacheNames) => {
+          return Promise.all(
+            cacheNames.map((cacheName) => caches.delete(cacheName))
+          );
+        })
+        .catch((error) => {
+          console.error('Cache clearing failed:', error);
+        })
+    );
   }
 });
